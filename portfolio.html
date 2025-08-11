@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" href="/VKavtaar.png" type="image/png" />
+    <title>My Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900 min-h-screen">
+    <section class="py-20 md:py-1 min-h-screen flex items-center">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between flex-col-reverse md:flex-row gap-10 items-center">
+          <div class="text-center md:text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-4xl tracking-tight">
+              <span class="block">Build Modern Apps Effortlessly</span>
+              <span class="bg-gradient-to-r from-blue-400 to-pink-600 bg-clip-text text-transparent block">With me</span>
+              <div id="portfolio-name" class="text-5xl md:text-6xl text-blue-600 my-8" style="font-family: Hind, sans-serif;">Your Name</div>
+            </h1>
+            <p id="portfolio-summary-hero" class="mt-4 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+              Your professional summary will appear here.
+            </p>
+            <div class="mt-6">
+              <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-base font-medium">
+                Buy Me A Coffee
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="./banner.png" alt="Hero Illustration" class="w-[80%] h-[80%] object-cover" />
+          </div>      
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-10 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl tracking-tight">About Me</h1>
+                <div class="py-5">
+                    <p id="portfolio-summary-about" class="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                        A more detailed summary about you will appear here.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-6 lg:px-8" id="skills">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl tracking-tight">My Skills</h1>
+            <p class="text-gray-600 mb-10 text-lg md:text-2xl py-5">
+                A quick overview of the technologies and tools I work with regularly.
+            </p>
+            <div id="skillsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+                <!-- Skills will be dynamically injected here -->
+            </div>
+        </div>
+    </section>
+
+   <section class="bg-gray-100 py-16 px-6 lg:px-8" id="experience">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-extrabold mb-12 text-gray-900 text-center">Experience</h2>
+            <div id="experience-container" class="relative border-l-2 border-blue-600 ml-4">
+                <!-- Experience will be dynamically injected here -->
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 px-6 lg:px-8" id="contact">
+        <!-- Contact form remains the same -->
+    </section>
+
+    <footer class="bg-gray-100 text-gray-700 py-10">
+        <div class="max-w-7xl mx-auto px-6 sm:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">About Me</h3>
+                    <p id="portfolio-summary-footer" class="text-sm leading-relaxed">
+                        Your summary will appear here.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+                        <li><a href="#experience" class="hover:text-blue-600 transition">Experience</a></li>
+                        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Contact</h3>
+                    <ul class="text-sm space-y-2">
+                        <li>Email: <a id="contact-email" href="mailto:youremail@example.com" class="hover:text-blue-600 transition">youremail@example.com</a></li>
+                        <li>Location: Mumbai India</li>
+                        <li>
+                            <div class="flex space-x-4 mt-2">
+                                <a id="contact-linkedin" href="#" aria-label="LinkedIn" class="hover:text-blue-600">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 8.98h4v12H3zM8.98 9h3.58v1.64h.05c.5-.95 1.73-1.96 3.57-1.96 3.82 0 4.53 2.49 4.53 5.72v6.6h-4v-5.85c0-1.4-.03-3.2-1.95-3.2s-2.25 1.52-2.25 3.1v5.95h-4V9z" /></svg>
+                                </a>
+                                <a id="contact-github" href="#" target="_blank" aria-label="GitHub" class="hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.112.82-.262.82-.583 0-.287-.01-1.05-.015-2.06-3.338.724-4.042-1.612-4.042-1.612-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.42-1.304.763-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404 c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.24 2.874.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.803 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.698.825.58C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z" /></svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 border-t pt-5 text-sm text-center text-gray-500">
+                © 2025 <span id="footer-name">Your Name</span>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve the portfolio data from localStorage
+            const dataString = localStorage.getItem('portfolioData');
+            
+            if (!dataString) {
+                // If no data, maybe redirect back or show a message
+                document.body.innerHTML = '<div class="text-center p-10"><h1>No portfolio data found.</h1><p>Please go back to the <a href="index.html" class="text-blue-600">generator page</a> to create your portfolio.</p></div>';
+                return;
+            }
+
+            const data = JSON.parse(dataString);
+
+            // --- Populate the page with the data ---
+            
+            // Name
+            document.getElementById('portfolio-name').textContent = data.name || 'Your Name';
+            document.getElementById('footer-name').textContent = data.name || 'Your Name';
+            document.title = data.name ? `${data.name}'s Portfolio` : 'My Portfolio';
+
+            // Summary
+            if(data.summary) {
+                document.getElementById('portfolio-summary-hero').textContent = data.summary;
+                document.getElementById('portfolio-summary-about').textContent = data.summary;
+                document.getElementById('portfolio-summary-footer').textContent = data.summary;
+            }
+
+            // Contact Info
+            const emailLink = document.getElementById('contact-email');
+            if(data.email) {
+                emailLink.href = `mailto:${data.email}`;
+                emailLink.textContent = data.email;
+            }
+            if(data.linkedin) document.getElementById('contact-linkedin').href = data.linkedin;
+            if(data.github) document.getElementById('contact-github').href = data.github;
+
+            // Skills
+            const skillsGrid = document.getElementById('skillsGrid');
+            if (data.skills && data.skills.length > 0) {
+                skillsGrid.innerHTML = data.skills.map(skill => `
+                    <div class="p-5 border rounded-lg shadow hover:shadow-md transition">
+                        <img src="https://cdn.simpleicons.org/${skill.toLowerCase().replace(/\.| /g, '')}" alt="${skill}" class="h-12 mx-auto mb-3" onerror="this.src='https://placehold.co/48x48/e2e8f0/334155?text=${skill.charAt(0)}'"/>
+                        <p class="font-semibold text-gray-800">${skill}</p>
+                    </div>
+                `).join('');
+            }
+
+            // Experience
+            const experienceContainer = document.getElementById('experience-container');
+            if (data.experience && data.experience.length > 0) {
+                experienceContainer.innerHTML = data.experience.map(exp => `
+                    <div class="mb-10 ml-8">
+                        <span class="absolute -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 ring-8 ring-white">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </span>
+                        <h3 class="text-xl font-semibold text-gray-900">${exp.title || ''}</h3>
+                        <p class="text-blue-600 font-medium mb-1">${exp.company || ''}</p>
+                        <time class="block mb-3 text-sm font-normal leading-none text-gray-500">${exp.dates || ''}</time>
+                        <p class="text-gray-700">${(exp.description || []).join('<br>')}</p>
+                    </div>
+                `).join('');
+            }
+
+            // Clean up localStorage so the data isn't stale on next visit
+            // localStorage.removeItem('portfolioData');
+
+            // Re-initialize animations after content is loaded
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  anime({
+                    targets: entry.target,
+                    opacity: [0, 1],
+                    translateY: [60, 0],
+                    duration: 800,
+                    easing: 'easeOutCubic'
+                  });
+                  observer.unobserve(entry.target); 
+                }
+              });
+            }, { threshold: 0.15 });
+            animatedElements.forEach(el => {
+              el.style.opacity = 0;
+              observer.observe(el);
+            });
+        });
+    </script>
+  </body>
+</html>
